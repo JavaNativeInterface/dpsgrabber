@@ -7,17 +7,17 @@ int main(int argc, char* argv[])
     /* check path */
     if (!argv[1])
     {
-        std::cout << "invalid specified path\n";
+        std::cout << "invalid specified path";
         getchar();
-        return -1;
+        return 1;
     }
 
     /* Open file */
     std::ifstream file(argv[1], 0);
     if (!file) {
-        std::cout << "failed to open file";
+        std::cout << "cant open the file";
         getchar();
-        return -1;
+        return 1;
     }
 
 
@@ -28,7 +28,7 @@ int main(int argc, char* argv[])
         file.close();
         std::cout << "invalid DOS header";
         getchar();
-        return -1;
+        return 1;
     }
 
 
@@ -40,7 +40,7 @@ int main(int argc, char* argv[])
         file.close();
         std::cout << "invalid PE header";
         getchar();
-        return -1;
+        return 1;
     }
 
 
