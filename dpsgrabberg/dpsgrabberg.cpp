@@ -11,8 +11,6 @@ int main(int argc, char* argv[])
         getchar();
         return -1;
     }
-    std::cout << "Reading " << argv[1] << '\n';
-
 
     /* Open file */
     std::ifstream file(argv[1], 0);
